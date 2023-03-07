@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: rgb(207,136,255);
+    background: linear-gradient(90deg, rgba(207,136,255,1) 0%, rgba(253,231,29,1) 50%, rgba(69,252,228,1) 100%);
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+.mobileNav{
+    position: relative;
+    overflow: hidden;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    height: 600px;
+    width: 340px;
+}
+.mobileNav .image{
+    opacity: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% - 60px);
+    width: 100%;
+    transition: opacity 0.4s ease;
+}
+.mobileNav .image.show{
+    opacity: 1;
+}
+nav{
+    background-color: rgb(255, 253, 253);
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: -5px;
+    width: 100%;
+}
+nav ul{
+    background-color: rgb(255, 253, 253);
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+}
+nav li{
+    color: rgb(34, 8, 34);
+    cursor: pointer;
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+nav ul li p{
+    font-size: 12px;
+    margin: 2px 0;
+}
+nav ul li:hover{
+    color:rgb(241, 245, 245);
+} 
+nav ul li.active{
+    color: rgb(158, 108, 214);
+}
